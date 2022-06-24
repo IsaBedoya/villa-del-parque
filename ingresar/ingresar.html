@@ -29,7 +29,7 @@
 
     <main>
         <div class="containerForm sign-in">
-            <form action="" class="form">
+            <form action="" class="form1" id="formSignIn">
                 <div class="form__title">
                     <h1>Iniciar Sesión</h1>
                 </div>
@@ -45,7 +45,37 @@
                     <input type="submit" value="Iniciar Sesión">
                 </div>
                 <div class="form__footer">
-                    <p>¿Aún no tienes cuenta? <a href="#">Registrarse</a></p>
+                    <p>¿Aún no tienes una cuenta? <a href="#">Registrarse</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="containerForm sign-up">
+            <form action="" class="form2" id="formSingUp">
+                <div class="form__title">
+                    <h1>Registrarse</h1>
+                </div>
+                <div class="form__name">
+                    <label for="name">Nombre: </label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form__phone">
+                    <label for="tel">Número de teléfono: </label>
+                    <input type="number" id="tel" name="tel">
+                </div>
+                <div class="form__email">
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" placeholder="Ej: tucorreo@gmail.com" name="email">
+                </div>
+                <div class="form__password">
+                    <label for="password">Contraseña: </label>
+                    <input type="password" id="password" placeholder="Ingresa tu contraseña" name="password">
+                </div>
+                <div class="form__login">
+                    <input type="submit" value="Iniciar Sesión" name="submit">
+                </div>
+                <div class="form__footer">
+                    <p>¿Ya tienes una cuenta? <a href="#">Iniciar Sesión</a></p>
                 </div>
             </form>
         </div>
