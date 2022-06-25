@@ -2,6 +2,8 @@
     --gray: #D2D2D2;
     --green: #26694D;
     --light-green: #22CD00;
+    --medium-green: #178a00;
+    --sombra: 0 .5rem 1rem rgba(0, 0, 0, .1);
     --degradado: linear-gradient(90deg, var(--light-green), var(--green));
 }
 
@@ -13,6 +15,7 @@ body{
     margin: 0;
     height: 100vh;
     font-family: "Montserrat", sans-serif;
+    overflow: hidden;
 }
 
 /* HEADER */
@@ -29,7 +32,7 @@ body{
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    box-shadow: var(--sombra);
     color: var(--green);
     z-index: 100;
 }
@@ -78,84 +81,147 @@ body{
 /* REGISTRO */
 
 main{
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     background-image: url(/assets/img/entradaDos.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
 }
 
 .containerForm{
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
+    width: 90%;
+    height: 90vh;
+    transition: all .5s ease-out;
+    margin: auto;
 }
 
-.form1, .form2{
-    position: relative;
-    margin-top: 90px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    height: auto;
-    max-width: 500px;
+.welcome-back{
+    display: flex;
+    align-items: center;
     text-align: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
-    padding: 50px;
 }
 
-.form2{
-    width: 80%;
-    max-width: 800px;
+.message {
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 20px;
+    text-align: center;
 }
 
-.form__title h1{
-    font-size: 1.5em;
-    margin-bottom: 40px;
+.message h2 {
+    font-size: 2.5rem;
+    text-shadow: -4px 3px 0 rgba(0, 0, 0, 0.548);
 }
 
-.form div{
-    margin-bottom: 20px;
+.message p{
+    text-shadow: -2px 2px 0 rgba(0, 0, 0, 0.548);
 }
 
-label{
+.message button {
+    padding: 1rem;
+    font-size: .9rem;
+    margin-top: 2rem;
+    font-weight: 400;
+    background-color: var(--light-green);
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    color: #fff;
+}
+
+.message button:hover {
+    background-color: var(--medium-green);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 1rem;
+    margin: 2rem;
+    background-color: rgba(0, 0, 0, 0.692);
+    text-align: center;
+}
+
+.title{
+    padding: 2rem 0;
+    font-size: 1.7rem;
+}
+
+.form input {
+    width: 70%;
     display: block;
-    margin-bottom: 10px;
-}
-
-input{
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #000;
+    margin: auto;
+    margin-bottom: 2rem;
+    font-size: .9rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: white thin solid;
+    text-align: center;
+    outline: none;
+    color: white;
     font-family: 'Montserrat', sans-serif;
 }
 
-input[type="submit"]{
-    background-color: var(--light-green);
-    color: #fff;
-    border: 1px solid #fff;
+.form label{
+    display: block;
+    margin-bottom: 1rem;
 }
 
-input[type="submit"]:hover{
-    background-color: var(--green);
-    border: 1px solid #000;
+.form input[type="button"] {
+    width: 60%;
+    margin: auto;
+    border: solid thin white;
+    padding: .7rem;
+    border-radius: 2rem;
+    background-color: white;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: .8rem;
     cursor: pointer;
+    color: #222;
 }
 
-.form__footer a{
-    color: var(--green);
-    text-decoration: none;
+.form2{
+    width: 600px;
 }
 
-.form__footer a:hover{
-    color: var(--light-green);
-    text-decoration: underline;
+.formContainer{
+    display: flex;
+    justify-content: space-around;
 }
 
+.formContainer input{
+    width: 110%;
+}
+
+.sign-up {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sign-up.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sign-in.active {
+    opacity: 0;
+    visibility: hidden;
+}
 
 /* RESPONSIVE */
 
