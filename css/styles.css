@@ -198,3 +198,9 @@ main h1{
         font-size: 1.5em;
     }
 }
+
+@media screen and (max-width: 450px){
+    .header{
+        height: 10vh;
+    }
+}

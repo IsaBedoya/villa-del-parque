@@ -371,3 +371,9 @@ main .title{
         width: 100%;
     }
 }
+
+@media screen and (max-width: 450px){
+    .header{
+        height: 10vh;
+    }
+}
