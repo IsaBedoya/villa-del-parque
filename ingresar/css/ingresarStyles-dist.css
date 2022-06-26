@@ -370,4 +370,8 @@ main{
     .message1{
         margin-top: 20px;
     }
+
+    .form2 input{
+        width: 70%;
+    }
 }
