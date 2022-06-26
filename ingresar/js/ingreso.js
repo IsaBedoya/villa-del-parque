@@ -1,3 +1,10 @@
+const btnMenu = document.querySelector('#btnMenu');
+const menu = document.querySelector('#menu');
+
+btnMenu.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
 const $btnSignIn= document.querySelector('.signInBtn'),
       $btnSignUp = document.querySelector('.signUpBtn'),  
       $signUp = document.querySelector('.sign-up'),
