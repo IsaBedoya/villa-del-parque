@@ -255,6 +255,7 @@ body{
 
     .container{
         margin-top: 150px;
+        width: 100%;
     }
 
     .form{
@@ -291,5 +292,9 @@ body{
 @media screen and (max-width: 450px){
     .header{
         height: 10vh;
+    }
+
+    .header__nav{
+        top: 10vh;
     }
 }

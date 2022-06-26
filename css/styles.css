@@ -200,7 +200,15 @@ main h1{
 }
 
 @media screen and (max-width: 450px){
+    body{
+        height: 100vh;
+    }
+
     .header{
         height: 10vh;
+    }
+
+    .header__nav{
+        top: 10vh;
     }
 }

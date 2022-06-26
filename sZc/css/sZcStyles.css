@@ -344,4 +344,8 @@ main .title{
     .header{
         height: 10vh;
     }
+
+    .header__nav{
+        top: 10vh;
+    }
 }

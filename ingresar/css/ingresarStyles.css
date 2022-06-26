@@ -245,17 +245,6 @@ main{
         justify-content: center;
     }
 
-    .main__title{
-        display: flex;
-        margin-top: 100px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .main__title h1{
-        text-align: center;
-    }
-
     .header__navbar{
         margin: 0;
         padding: 0;
@@ -284,6 +273,7 @@ main{
         opacity: 0;
         width: 100%;
         transition: opacity 0.3s;
+        pointer-events: none;
     }
 
     .header__nav.active{
@@ -293,6 +283,8 @@ main{
         width: 100%;
         height: auto;
         left: 0;
+        z-index: 100;
+        pointer-events: unset;
         transition: opacity 0.3s;
     }
 
@@ -333,7 +325,41 @@ main{
 }
 
 @media screen and (max-width: 450px){
+    body{
+        height: auto;
+        overflow-x: hidden;
+    }
+
+    main{
+        height: 1000px;
+    }
+
     .header{
         height: 10vh;
+    }
+
+    .header__nav{
+        top: 10vh;
+    }
+
+    .containerForm{
+        margin-top: 50px;
+    }
+
+    .form2{
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .formContainer{
+        flex-direction: column;
+    }
+
+    .message2{
+        margin-top: 50px;
+    }
+
+    .message2 button{
+        margin-top: 1rem;
     }
 }
