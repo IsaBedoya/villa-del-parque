@@ -328,4 +328,14 @@ main .title{
         margin-bottom: 0;
         z-index: -1;
     }
+
+    .title h1{
+        width: 90%;
+        margin: auto;
+    }
+
+    .title{
+        margin-top: 100px;
+        width: 100%;
+    }
 }

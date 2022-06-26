@@ -226,10 +226,6 @@ body{
     transition: .5s;
 }
 
-/* #trucazo{
-    opacity: 0;
-} */
-
 /* RESPONSIVE */
 
 @media screen and (max-width: 685px){
@@ -238,6 +234,7 @@ body{
         flex-direction: row;
         justify-content: space-between;
         height: 15vh;
+        z-index: 100;
     }
 
     .header__navbar{
@@ -298,8 +295,7 @@ body{
     }
 
     .container{
-        margin-top: 250px;
-        width: 100%;
+        margin-top: 150px;
     }
 
     .form{
