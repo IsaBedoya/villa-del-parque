@@ -360,10 +360,14 @@ main{
     }
 
     .message2{
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     .message2 button{
         margin-top: 1rem;
+    }
+
+    .message1{
+        margin-top: 20px;
     }
 }
