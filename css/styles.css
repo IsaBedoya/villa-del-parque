@@ -197,6 +197,11 @@ main h1{
         cursor: pointer;
         font-size: 1.5em;
     }
+
+    main{
+        background-image: url(/assets/img/canchaPiscinaDos.jpeg);
+        background-position: top;
+    }
 }
 
 @media screen and (max-width: 450px){
