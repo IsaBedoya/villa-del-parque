@@ -308,9 +308,9 @@ main{
 
     main{
         height: 100%;
-        background-position: center;
         background-size: auto 100%;
         overflow: hidden;
+        background-position: right bottom;
         width: 100%;
     }
 
