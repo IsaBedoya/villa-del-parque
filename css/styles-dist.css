@@ -114,8 +114,7 @@ main h1{
 }
 
 .buttonLogin:hover{
-    color: var(--light-green);
-    background-color: var(--gray);
+    background-color: var(--medium-green);
     border: none;
     transition: .5s;
 }

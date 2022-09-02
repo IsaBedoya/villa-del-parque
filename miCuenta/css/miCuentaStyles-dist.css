@@ -157,6 +157,7 @@ tfoot{
     width: 150px;
     padding: 10px;
     margin-bottom: 20px;
+    transition: .5s;
 }
 
 .btnCerrarSesion a{
@@ -164,10 +165,12 @@ tfoot{
     color: #fff;
     display: block;
     width: 100%;
+    transition: .5s;
 }
 
 .btnCerrarSesion:hover{
     background-color: var(--green);
+    transition: .5s;
 }
 
 /* RESPONSIVE */
