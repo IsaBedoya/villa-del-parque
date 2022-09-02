@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ef6746560c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/miCuenta/css/miCuentaStyles-dist.css">
+    <title>Mi Cuenta</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="/assets/icons/logo-villadelparque.png" alt="Logo villa del parque">
+        </div>
+
+        <span class="nav-bar" id="btnMenu">
+            <i class="fas fa-solid fa-bars"></i>
+        </span>
+        
+        <nav class="header__nav" id="menu">
+            <ol class="header__navbar">
+                <li class="index"><a href="/index.html">Inicio</a></li>
+                <li><a href="/solicitudesZonasComunes.html">Solucitudes zonas comunes</a></li>
+                <li><a href="/PQR.html">PQR</a></li>
+                <li><a href="/miCuenta.html" class="active">Mi Cuenta</a></li>
+            </ol>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Mi cuenta</h2>
+            <h1 class="title">Hola Isabela</h1>
+            <p>¡Paga tus facturas facilmente!</p>
+            <p>Desde aquí podrás ver tu historial de pagos.</p> 
+
+            <h2>Consulta y pago de tus facturas</h2>
+            <div class="historialPagos">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Factura</td>
+                            <td>Fecha</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Factura 1</td>
+                            <td><button>Pagar</button></td>
+                            <td><a href="#">Ver detalles</a></td>
+                        </tr>
+                        <tr>
+                            <td>Factura 2</td>
+                            <td>dd/mm/aaaa</td>
+                            <td><a href="#">Ver detalles</a></td>
+                        </tr>
+                        <tr>
+                            <td>Factura 3</td>
+                            <td>dd/mm/aaaa</td>
+                            <td><a href="#">Ver detalles</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <a href="#">Ver más</a>
+            </div>
+
+            <div class="editPorfile">
+                <a href="#">Editar perfil</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="/miCuenta/js/miCuenta.js"></script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+:root{
+    --gray: #D2D2D2;
+    --green: #26694D;
+    --light-green: #22CD00;
+    --medium-green: #178a00;
+    --sombra: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --degradado: linear-gradient(90deg, var(--light-green), var(--green));
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* HEADER */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90px;
+    padding: 0.5rem 8%;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: var(--sombra);
+    color: var(--green);
+}
+
+.header__logo{
+    flex-grow: 0;
+}
+
+.header__logo img{
+    width: 70px;
+}
+
+.header__menu{
+    flex-grow: 4;
+    text-align: center;
+}
+
+.header__navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__navbar li{
+    list-style: none;
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.header__navbar li a{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--green);
+}
+
+.header__navbar li a:hover{
+    color: var(--light-green);
+}
+
+.header__navbar li a.active{
+    color: var(--light-green);
+}
+
+.nav-bar{
+    display: none;
+}
+
+/* MAIN */
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1{
+    text-align: center;
+}
+
+.text p{
+    text-align: center;
+}
+
+.text{
+    padding: 20px;
+}
+
+.text span{
+    font-weight: bold;
+}
+
+.form{
+    margin-top: 50px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 5px 50%;
+    grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto 5px auto 5px auto;
+    grid-template-rows: auto auto auto;
+    gap: 5px;
+    width: 100%;
+    background-color: var(--gray);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.form > *:nth-child(1){
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+.form > *:nth-child(2){
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
+.form > *:nth-child(3){
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+}
+
+.form > *:nth-child(4){
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+}
+
+.form > *:nth-child(5){
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+}
+
+.form > *:nth-child(6){
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+}
+
+::-moz-placeholder{
+    font-family: "Montserrat", sans-serif;
+}
+
+:-ms-input-placeholder{
+    font-family: "Montserrat", sans-serif;
+}
+
+::placeholder{
+    font-family: "Montserrat", sans-serif;
+}
+
+.form div{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.form input{
+    margin-top: 10px;
+    width: 80%;
+    padding: 6px;
+    border: 1px solid rgb(100, 100, 100);
+    font-family: "Montserrat", sans-serif;
+}
+
+.form input:focus{
+    border: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.form select{
+    font-family: "Montserrat", sans-serif;
+    padding: 5px;
+    margin-top: 10px;
+    width: 80%;
+    border: 1px solid rgb(100, 100, 100);
+}
+
+.form select option{
+    font-family: "Montserrat", sans-serif;
+}
+
+.form textarea{
+    margin-top: 10px;
+    width: 80%;
+    height: 50px;
+    border: 1px solid rgb(100, 100, 100);
+    font-family: "Montserrat", sans-serif;
+}
+
+.form textarea:focus{
+    font-family: "Montserrat", sans-serif;
+}
+
+.form button{
+    width: 40%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid rgb(100, 100, 100);
+    transition: .5s;
+}
+
+.form button:hover{
+    color: #fff;
+    background-color: rgb(46, 46, 46);
+    transition: .5s;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 685px){
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 15vh;
+        z-index: 100;
+    }
+
+    .header__navbar{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .header__navbar{
+        margin: 0;
+        padding: 0;
+    }
+
+    .header__navbar li{
+        padding: 20px;
+        padding-right: 0;
+        width: 100%;
+        border-bottom: 1px solid #000;
+    }
+
+    .header__navbar .index{
+        border-top: 1px solid #000;
+    }
+
+    .header__navbar li a{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .header__nav{
+        position: fixed;
+        top: 15vh;
+        height: 0;
+        opacity: 0;
+        width: 100%;
+        transition: opacity 0.3s;
+        pointer-events: none;
+    }
+
+    .header__nav.active{
+        display: block;
+        opacity: 1;
+        background-color: #fff;
+        width: 100%;
+        height: auto;
+        left: 0;
+        z-index: 100;
+        pointer-events: unset;
+        transition: opacity 0.3s;
+    }
+
+    .nav-bar{
+        display: inline-block;
+        color: var(--green);
+        cursor: pointer;
+        font-size: 1.5em;
+    }
+
+    .container{
+        margin-top: 150px;
+        width: 100%;
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-top: 20px;
+        border-radius: 0;
+    }
+
+    .text{
+        width: 90%;
+    }
+
+    .form input, .form select, .form textarea, .form button{
+        width: 90%;
+    }
+
+    .form div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .header{
+        height: 10vh;
+    }
+
+    .header__nav{
+        top: 10vh;
+    }
+}

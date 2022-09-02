@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ef6746560c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/pqr/css/pqrStyles-dist.css">
+    <title>PQR</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="/assets/icons/logo-villadelparque.png" alt="Logo villa del parque">
+        </div>
+
+        <span class="nav-bar" id="btnMenu">
+            <i class="fas fa-solid fa-bars"></i>
+        </span>
+        
+        <nav class="header__nav" id="menu">
+            <ol class="header__navbar">
+                <li class="index"><a href="/index.html">Inicio</a></li>
+                <li><a href="/solicitudesZonasComunes.html">Solucitudes zonas comunes</a></li>
+                <li><a href="/PQR.html" class="active">PQR</a></li>
+                <li><a href="/ingresar.html">Ingresar</a></li>
+            </ol>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="title">
+                <h1>PQRSFD</h1>
+            </div>
+    
+            <div class="text">
+                <p>Antes de responder este formuario, tenga en cuenta los siguientes conceptos:</p>
+                <p><span>Pregunta:</span> Es una consulta hechas a razón de la necesidad de información puntual sobre servicios y otros productos ofrecidos por la Organización o sus procesos.</p>
+                <p><span>Petición:</span> Es...</p>
+                <p><span>Queja:</span> Es una manifestación de insatisfacción con alguna de nuestras actuaciones o protesta que se hace a causa de un desacuerdo o inconformidad.</p>
+                <p><span>Reclamo:</span> Es una solicitud o exigencia de un derecho vulnerado como consecuencia del incumplimiento o irregularidad de alguna de las características de los servicios ofrecidos por la institución.</p>
+                <p><span>Sugerencia:</span> Es la aportación de ideas, iniciativas que tiene como propósito mejorar la prestación del servicio en cualquiera de las áreas de la Institución.</p>
+                <p><span>Felicitación:</span> Manifestación de agrado y satisfacción con relación a la labor desempeñada en la institución o con el servicio prestado.</p>
+                <p><span>Denuncia:</span> Es la acción en que se comunica, informa o da aviso sobre el conocimiento de hechos o conductas irregulares que impliquen un eventual detrimento de los bienes o recursos, así como las faltas frente a personas y su integridad o la de la Organización.</p>
+            </div>
+    
+            <form action="https://formsubmit.co/c046d07c09e5d96950299a3de8126a91" method="POST" class="form" id="form" netlify>
+                <div class="form__name">
+                    <label for="name">Nombre completo:</label>
+                    <input type="text" placeholder="Escribe tu nombre completo" id="name" name="name">
+                </div>
+    
+                <div class="form__correo">
+                    <label for="correo">Correo:</label>
+                    <input type="email" placeholder="Escribe tu correo" id="correo" required name="email">
+                </div>
+    
+                <div class="form__tel">
+                    <label for="tel">Número de contacto:</label>
+                    <input type="number" placeholder="Escribe tu número de contacto" id="tel" name="phoneNumber">
+                </div>
+    
+                <div class="form__asunto">
+                    <label for="asunto">Tipo de mensaje:</label>
+                    <select name="asunto" id="asunto" required name="asunto">
+                        <option value="pregunta">Pregunta</option>
+                        <option value="peticion">Petición</option>
+                        <option value="queja">Queja</option>
+                        <option value="reclamo">Reclamo</option>
+                        <option value="sugerencua">Sugerencia</option>
+                        <option value="felicitacion">Felicitación</option>
+                        <option value="denuncia">Denuncia</option>
+                    </select>
+                </div>
+    
+                <div class="form__mensaje">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="message" id="mensaje" required></textarea>
+                </div>
+
+                <div class="form__submit">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+            <!-- <a href="mailto:isbega0406@gmail.com" id="trucazo">mail</a> -->
+        </div>
+    </main>
+
+    <script src="/pqr/js/pqr.js"></script>
+</body>
+</html>
