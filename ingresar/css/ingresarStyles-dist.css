@@ -211,18 +211,18 @@ main{
     width: 110%;
 }
 
-.sign-up {
+.sign-in {
     position: absolute;
     opacity: 0;
     visibility: hidden;
 }
 
-.sign-up.active {
+.sign-in.active {
     opacity: 1;
     visibility: visible;
 }
 
-.sign-in.active {
+.sign-up.active {
     opacity: 0;
     visibility: hidden;
 }

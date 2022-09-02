@@ -1,17 +1,15 @@
 {
-  "name": "js",
+  "name": "ingresar",
   "version": "1.0.0",
   "description": "",
-  "main": "ingreso.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node ingreso.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pg": "^8.8.0",
-    "sweetalert2": "^11.4.29"
+    "pg": "^8.8.0"
   }
 }
