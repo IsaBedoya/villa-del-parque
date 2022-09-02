@@ -124,6 +124,6 @@ btnIS.addEventListener("click", e => {
 
         setTimeout(function(){
             location.href = "/miCuenta.html"
-        }, 3000)
+        }, 1000)
     }
 })
