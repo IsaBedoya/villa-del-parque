@@ -30,55 +30,100 @@ btnSignUp.addEventListener("click", () => {
 
 
 // VALIDACIÓN:
-$('#btnR').click( (e) => {
-    e.preventDefault();
-    nom= $('#name').val();
-    tel= $('#tel').val();
-    email= $('#email').val();
-    pass= $('#password').val();
-    $.ajax({
+const formR = document.getElementById('formSingUp');
+const btnIS = document.getElementById('btnIS');
+const userName = document.getElementById('name');
+const userTel = document.getElementById('tel');
+const userEmailR = document.getElementById('email');
+const userEmailIS = document.getElementById('email2');
+const userPassR = document.getElementById('password');
+const userPassIS = document.getElementById('password2');
 
-        url:'conexion.php',
-        type:'post',
-        data:{nom:nom,tel:tel,email:email,pass:pass},
-        success:() => {
-            $('#name').val(' ');
-            $('#tel').val(' ');
-            $('#email').val(' ');
-            $('#password').val(' ');
 
-            Swal.fire({
-                title: 'Usuario registrado',
-                icon: 'success',
-                showConfirmButton: false,
-                timer: 3000
-            })
+async function validarResgistro(){
+    const regUserName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+    const regUserTel = /\d/;
+    const regUserEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
+    const regUserPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,16}$/;
 
-            location.href = "/miCuenta.html"
+    if (!regUserName.test(userName.value) || !userName.value.trim()) {
+        return Swal.fire({
+            title: 'Error!',
+            text: 'El nombre no es valido',
+            icon: 'error'
+        })
+    }
+
+    if (!regUserTel.test(userTel.value) || !userTel.value.trim()) {
+        return Swal.fire({
+            title: 'Error!',
+            text: 'El número de contacto no es valido',
+            icon: 'error'
+        })
+    }
+
+    if (!regUserEmail.test(userEmailR.value) || !userEmailR.value.trim()) {
+        return Swal.fire({
+            title: 'Error!',
+            text: 'El email no es valido',
+            icon: 'error'
+        })
+    }
+
+    if (!regUserPass.test(userPassR.value) || !userPassR.value.trim()) {
+        return Swal.fire({
+            title: 'Error!',
+            text: 'La contraseña no es valida. Debe tener entre 8 y 16 caracteres, al menos 1 mayúscula, 1 minúscula, 1 digito y 1 caracter especial. No debe tener espacios.',
+            icon: 'error'
+        })
+    } 
+    
+    if(regUserName.test(userName.value) || userName.value.trim()){
+        if(regUserTel.test(userTel.value) || userTel.value.trim()){
+            if(regUserEmail.test(userEmailR.value) || userEmailR.value.trim()){
+                if(regUserPass.test(userPassR.value) || !userPassR.value.trim()){
+                    await Swal.fire({
+                        title: 'Usuario registrado',
+                        icon: 'success',
+                        showConfirmButton: false,
+                        timer: 3000
+                    })
+            
+                    location.href = "/miCuenta.html"
+                }
+            }
         }
-    })
+    }     
+
+}
+
+
+
+formR.addEventListener("submit", async e => {
+    e.preventDefault();
+
+    await validarResgistro();
 })
 
-// var formR = document.getElementById('formSingUp');
+btnIS.addEventListener("click", e => {
+    e.preventDefault();
+    
+    if(!userEmailIS.value.trim() || !userPassIS.value.trim()){
+        return Swal.fire({
+            title: 'Error!',
+            text: 'Los campos no pueden estar vacios',
+            icon: 'error'
+        })
+    } else{
+        Swal.fire({
+            title: 'Usuario registrado',
+            icon: 'success',
+            showConfirmButton: false,
+            timer: 3000
+        })
 
-// formR.addEventListener('submit', function(e){
-//     e.preventDefault();
-//     console.log('me diste click')
-
-//     var datos = new FormData(formR);
-
-//     console.log(datos);
-//     console.log(datos.get('name'));
-//     console.log(datos.get('tel'));
-//     console.log(datos.get('email'));
-//     console.log(datos.get('password'));
-
-//     fetch('conexion.php', {
-//         method: 'POST',
-//         body: datos
-//     })
-//         .then(res => res.json())
-//         .then(data => {
-//             console.log(data)
-//         })
-// })
+        setTimeout(function(){
+            location.href = "/miCuenta.html"
+        }, 3000)
+    }
+})
