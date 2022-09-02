@@ -115,15 +115,8 @@ btnIS.addEventListener("click", e => {
             icon: 'error'
         })
     } else{
-        Swal.fire({
-            title: 'Usuario registrado',
-            icon: 'success',
-            showConfirmButton: false,
-            timer: 3000
-        })
-
-        setTimeout(function(){
-            location.href = "/miCuenta.html"
-        }, 1000)
+        
+        location.href = "/miCuenta.html"
+    
     }
 })
